@@ -137,6 +137,28 @@ This is just **Phase 4 "infrastructure pluralism" applied to compute.** It's the
 - **Identity:** one keypair = your profile node = your Radicle-style code identity. Bitsocial already treats identity as keypair-controlled and portable; Radicle already maps Node ID = Peer ID = Public Key and supports DID compatibility, so unification is plausible.
 - **Spam on public repos** (a real GitHub pain — issue/PR spam): Bitsocial's **per-community challenge model** maps directly. A repo can require a challenge (captcha, rate-limit, token-gate, allowlist, payment, custom code) before an outside identity can open an issue or submit a patch — local, operator-defined, no platform-level super-admin.
 
+### 6.5 GitHub mirroring as the onboarding path
+
+Asking a project to migrate is the hardest sell. Asking it to mirror costs nothing: the repository stays on GitHub, a mirror keeps a p2p copy in sync, and the team keeps pushing where it already pushes. [open-git](https://open-git.com/home), a self-hosted (not decentralized) code host, leads its pitch with this, and the idea transfers directly.
+
+- **No migration step.** It is plain git on both ends, so every commit, branch, and tag is identical. Stopping the mirror loses nothing, because the repository is whole in both places.
+- **The social layer arrives first.** A mirrored repo gets a project page, a Discussions community, and profile links on day one, before anyone moves issues, pull requests, or CI.
+- **Mirrors are one more replaceable service.** A mirror can run on the maintainer's own node or be offered over public RPC by competing providers, like seeders and CI runners.
+- **One side is canonical per ref.** Two-way sync needs a rule for diverging pushes. The simplest is fast-forward only, with GitHub canonical until the maintainers flip it. The flip is the actual migration, and by then it is a setting, not a project.
+- **Code first.** Mirroring refs is easy. Mirroring issues and pull requests means two canonical states (see §8), so those stay on GitHub until a project switches.
+
+### 6.6 Agent session records that travel with the code
+
+A growing share of commits is written by coding agents, and review then depends on what the agent was told as much as on the diff. open-git captures the agent session (prompts, transcript, tool calls) and stores it on a metadata branch inside the repository, in a format compatible with [Entire](https://entire.io), then shows it in the pull request timeline.
+
+This fits a p2p forge better than a hosted one, because a metadata branch is ordinary git data:
+
+- It replicates with the repository over the code layer, so no forge database holds the record and no provider can withhold it.
+- It can be signed by the same key as the commits, so "this agent session produced this commit" is verifiable by anyone.
+- Any client can render it. A client that ignores the branch still works.
+
+Session transcripts can contain secrets and private context, so capture should be opt-in per repository and off by default for public ones, as open-git does.
+
 ---
 
 ## 7. Hybrid & collaborating with Radicle
@@ -170,7 +192,7 @@ This lets pieces ship as the protocol matures, instead of waiting for everything
 
 - **v0 — Discussions, today-ish.** A Bitsocial community attachable to *any* existing repo (even a GitHub or Radicle one) as its "Discussions." The social layer is the part that's buildable earliest and is valuable standalone — a decentralized comment/community layer for OSS projects.
 - **v1 — Profiles (needs Phase 3).** Profile nodes show a developer's repos + activity (mirror/read), with follows/feeds; Discussions are communities.
-- **v2 — Real p2p repos.** Adopt Radicle or git-on-IPFS; patches/issues land (COBs or native).
+- **v2 — Real p2p repos.** Adopt Radicle or git-on-IPFS; patches/issues land (COBs or native). Existing projects arrive through GitHub mirroring (§6.5) instead of a migration, and agent session records (§6.6) ride along as a metadata branch.
 - **v3 — CI marketplace (Phase 4 economics).** Competing runner services over public RPC, with the trust model in 6.3.
 - **v4 — Sponsors/grants (Phase 2 rails).** Funding flows to maintainers and to durable seeding/CI for the commons.
 
