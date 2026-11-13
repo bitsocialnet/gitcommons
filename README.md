@@ -4,7 +4,7 @@
 
 > **Status: vision stage.** This is research, not a build specification. The project belongs in [Phase 5 of the Bitsocial master plan](https://bitsocial.net/#master-plan-phase-5) and depends on Phase 3 profile nodes plus practical public RPC infrastructure.
 >
-> **Working name: Gitcommons.** "Decentralized GitHub" describes the research topic; Gitcommons is the working name for the product (see [§10](#10-naming)). This project is independent and is not affiliated with or endorsed by GitHub, Inc. or the Git project.
+> **Working name: GitCommons.** "Decentralized GitHub" describes the research topic; GitCommons is the working name for the product (see [§10](#10-naming)). This project is independent and is not affiliated with or endorsed by GitHub, Inc. or the Git project.
 
 ## Documents
 
@@ -200,7 +200,7 @@ This lets pieces ship as the protocol matures, instead of waiting for everything
 
 ## 10. Naming
 
-The working name is **Gitcommons**: the shared place for git that nobody owns. It is descriptive (git), it states the difference from GitHub (a commons has no owner, a hub has one), and it reads as the universal place for code rather than as a niche alternative.
+The working name is **GitCommons**: the shared place for git that nobody owns. It is descriptive (git), it states the difference from GitHub (a commons has no owner, a hub has one), and it reads as the universal place for code rather than as a niche alternative.
 
 **Bitsocial Forge** already names the operator and RPC service, so "forge" stays out of the product name.
 
