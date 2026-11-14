@@ -1,19 +1,21 @@
 # Master plan context
 
-Why a decentralized-GitHub client is a **Phase 5** project that depends on **Phase 3**, with the relevant Bitsocial master plan text and protocol primitives. Sourced from the Bitsocial Web repo (`bitsocial-web/docs/*` and `about/public/translations/en/default.json`) on 2026-06-02. Live version: <https://bitsocial.net/#master-plan>.
+Why a decentralized-GitHub client is a **Phase 5** project that depends on **Phase 2**, with the relevant Bitsocial master plan text and protocol primitives. Sourced from the Bitsocial Web repo (`bitsocial-web/docs/*` and `about/public/translations/en/default.json`) on 2026-06-02. Live version: <https://bitsocial.net/#master-plan>.
 
 ---
 
 ## The master plan (homepage version, verbatim)
 
+> On 2026-11-14 the master plan swapped phases 2 and 3: the flagship Twitter/X alternative is now Phase 2 and Bitsocial Chain (formerly Bitsocial Network) is Phase 3. The phases below use the new numbers.
+
 **Phase 1 — Ongoing: Decentralize imageboards and forums**
 Imageboards are the simplest form of social media to decentralize: anonymous posting, few default boards, and no profile graph. 5chan proves Bitsocial can replace centralized imageboards while removing global admins from the equation. Bitsocial Forge will launch the first non-custodial RPC service for Bitsocial apps. Bitsocial RPC will let users manage nodes remotely, while preserving the option to self-host or run competing RPC infrastructure. Users will be able to create and manage unstoppable p2p communities from mobile. Forums add persistent identities, post history, and community management. Seedit is the first prototype Bitsocial app for Reddit-style discussion, and public RPC makes those always-on P2P communities practical from anywhere.
 
-**Phase 2: Launch Bitsocial Network**
-In order to decentralize all social media, Bitsocial apps will need killer features and strong network effects: unstoppable financial structures, decentralized Bitsocial domains (.bso), awards and tipping, common liquidity, and practical monetization. All of this will be powered by Bitsocial Network, a decentralized appchain solution for Bitsocial apps.
+**Phase 2: Launch the flagship Bitsocial app**
+The flagship Bitsocial app should be the first profile-based client: posts, replies, follows, real-time public conversation, and communities that can pull network effects from every Bitsocial client. By default, it can feel as familiar as a modern For You social app, while still letting users switch RPCs, feeds, instances, algorithms, ads, or remove ranking entirely. Through non-custodial RPC, each user can still act as a full p2p node without trusting the RPC with ownership. Anyone should be able to move to their own **profile node** on a low-spec machine, including a Raspberry Pi, whenever they want. Because Phase 3 gives the app an unstoppable crypto financial layer, the flagship client can potentially become an everything-app without turning into a custodial platform.
 
-**Phase 3: Launch the flagship Bitsocial app**
-The flagship Bitsocial app should be the first profile-based client: posts, replies, follows, real-time public conversation, and communities that can pull network effects from every Bitsocial client. By default, it can feel as familiar as a modern For You social app, while still letting users switch RPCs, feeds, instances, algorithms, ads, or remove ranking entirely. Through non-custodial RPC, each user can still act as a full p2p node without trusting the RPC with ownership. Anyone should be able to move to their own **profile node** on a low-spec machine, including a Raspberry Pi, whenever they want. Because Phase 2 gives the app an unstoppable crypto financial layer, the flagship client can potentially become an everything-app without turning into a custodial platform.
+**Phase 3: Launch Bitsocial Network**
+In order to decentralize all social media, Bitsocial apps will need killer features and strong network effects: unstoppable financial structures, decentralized Bitsocial domains (.bso), awards and tipping, common liquidity, and practical monetization. All of this will be powered by Bitsocial Network, a decentralized appchain solution for Bitsocial apps.
 
 **Phase 4: Scale Bitsocial economies**
 The next layer is ecosystem funding and infrastructure pluralism. Bitsocial Forge's RPC should not be the only successful RPC: many businesses, independent teams, anonymous operators, and community entities should build RPCs, media hosting, discovery, moderation, and other services on top of Bitsocial. Funding should push that decentralization forward, so developers and operators can compete to make the network faster, cheaper, more reliable, and harder to capture.
@@ -28,12 +30,12 @@ With the core apps, public RPCs, profile nodes, discovery, and monetization in p
 | Phase | What it provides | What the GitHub client uses it for |
 | --- | --- | --- |
 | **1** | 5chan/Seedit communities, first non-custodial Forge RPC, mobile p2p communities | The **Discussions-tab-as-community** primitive already works here (v0 is buildable earliest). |
-| **2** | Bitsocial Network: .bso names, tipping, awards, monetization | **Sponsors-equivalent**, durable-seeding funding, repo/profile naming. |
-| **3** | **Flagship profile-based app + profile nodes + non-custodial RPC** | **THE UNLOCK.** GitHub profiles = profile nodes. Mainstream onboarding = Forge RPC. Without this, no decentralized GitHub. |
+| **2** | **Flagship profile-based app + profile nodes + non-custodial RPC** | **THE UNLOCK.** GitHub profiles = profile nodes. Mainstream onboarding = Forge RPC. Without this, no decentralized GitHub. |
+| **3** | Bitsocial Network: .bso names, tipping, awards, monetization | **Sponsors-equivalent**, durable-seeding funding, repo/profile naming. |
 | **4** | Infrastructure pluralism: competing RPCs, hosts, discovery, moderation, profile-node hosting | **The CI-runner marketplace** + Explore/discovery services + repo seeding-as-a-service. |
 | **5** | Fund the long tail of clients + "tools that make existing communities easier to run" | **Home of the GitHub-alternative client itself.** |
 
-**Conclusion:** it's a **Phase 5 client**, only *possible* because of **Phase 3** (profile nodes + RPC), and economically shaped by **Phase 4** (service competition → CI marketplace). Phase 2 funds the commons. This matches the original instinct that "it's not possible before Phase 3."
+**Conclusion:** it's a **Phase 5 client**, only *possible* because of **Phase 2** (profile nodes + RPC), and economically shaped by **Phase 4** (service competition → CI marketplace). Phase 3 funds the commons. This matches the original instinct that "it's not possible before Phase 2."
 
 ---
 
@@ -66,6 +68,6 @@ This matters for two reasons:
 ## Branding notes
 
 - Protocol/org: **Bitsocial** (capital B). Operator: **Bitsocial Forge**. RPC service: **Forge RPC**.
-- Existing clients: **5chan** (imageboard), **Seedit** (Reddit-style), **plebones**, flagship app (Phase 3, X/Twitter-style).
+- Existing clients: **5chan** (imageboard), **Seedit** (Reddit-style), **plebones**, flagship app (Phase 2, X/Twitter-style).
 - Naming heritage worth noting: **Plebbit** is the predecessor protocol Bitsocial evolved from (subplebbit → community, plebbit-js lineage). Useful context, not something to surface to mainstream users.
 - The GitHub-alternative client has **no name yet** — and doesn't need one until build time.

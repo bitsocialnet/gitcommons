@@ -2,7 +2,7 @@
 
 Date: 2026-06-02
 
-Status: parked Phase 5 research note. This is not a build spec yet. It depends on Phase 3 profile nodes and practical public RPC, and probably benefits from Phase 4 service-market infrastructure.
+Status: parked Phase 5 research note. This is not a build spec yet. It depends on Phase 2 profile nodes and practical public RPC, and probably benefits from Phase 4 service-market infrastructure.
 
 ## Short thesis
 
@@ -28,16 +28,16 @@ Put another way: Bitsocial can decentralize GitHub's social surface without pret
 
 - Phase 5 could include a decentralized GitHub alternative as one of the "long tail" Bitsocial clients.
 - The GitHub `Discussions` tab could be a Bitsocial community attached to a repo or project.
-- Developer profiles could be Bitsocial profile nodes, matching the Phase 3 idea that each profile is a full p2p node, often accessed through non-custodial public RPC such as Bitsocial Forge RPC.
+- Developer profiles could be Bitsocial profile nodes, matching the Phase 2 idea that each profile is a full p2p node, often accessed through non-custodial public RPC such as Bitsocial Forge RPC.
 - CI could be decentralized as a market of centralized or self-hosted runner services. GitHub Actions is powerful, but GitHub forces projects into its integrated runner ecosystem by default. A Bitsocial forge client could let projects choose any runner service over public RPC, with multiple providers competing.
 - The social graph matters: profiles, project feeds, follows, discussions, announcements, maintainership, reputations, sponsors, grants, and discovery are the parts that make open source thrive.
 - Radicle is the closest existing project and may be worth collaborating with rather than competing against directly.
 
 ## Fit with the master plan
 
-This belongs after Phase 3, not before it.
+This belongs after Phase 2, not before it.
 
-Local Bitsocial docs already describe Phase 3 as the first profile-based client with posts, replies, follows, real-time public conversation, communities, replaceable RPCs, optional feed algorithms, and self-hostable profile nodes. A developer forge needs exactly those primitives.
+Local Bitsocial docs already describe Phase 2 as the first profile-based client with posts, replies, follows, real-time public conversation, communities, replaceable RPCs, optional feed algorithms, and self-hostable profile nodes. A developer forge needs exactly those primitives.
 
 Local docs also describe Phase 5 as the point where Bitsocial expands into the long tail of social clients after core apps, public RPCs, profile nodes, discovery, and monetization exist. A GitHub alternative is a perfect Phase 5 client because it is partly social media for developers and partly service infrastructure.
 
@@ -216,7 +216,7 @@ External:
 - Radicle seeder guide: https://radicle.dev/guides/seeder
 - Radicle CI development article: https://radicle.dev/2025/07/23/using-radicle-ci-for-development.html
 - Radicle with GitHub Actions article: https://radicle.dev/2025/05/30/radicle-with-github-actions.html
-- Bitsocial master plan, Phase 3: https://bitsocial.net/#master-plan-phase-3
+- Bitsocial master plan, Phase 2: https://bitsocial.net/#master-plan-phase-2
 - Bitsocial master plan, Phase 5: https://bitsocial.net/#master-plan-phase-5
 
 Bitsocial context:

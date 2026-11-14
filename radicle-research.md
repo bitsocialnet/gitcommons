@@ -77,12 +77,12 @@ Directly relevant to the "decentralize CI" idea — and a useful contrast with t
 | Issues/PRs/reviews | ✅ COBs (signed, CRDT, offline) | ➖ Could reuse COBs or model natively |
 | Per-repo governance | ✅ Delegates + threshold | ➖ Community ownership (keypair) |
 | CI | ✅ Self-hosted broker/adapters | 🎯 Competing runners via public RPC (the upgrade) |
-| **Identity / profiles** | ❌ Bare pubkey + alias | ✅ Rich profiles = profile nodes (Phase 3) |
-| **Social graph** (follow/feed/Explore) | ❌ None | ✅ Native (flagship app, Phase 3) |
+| **Identity / profiles** | ❌ Bare pubkey + alias | ✅ Rich profiles = profile nodes (Phase 2) |
+| **Social graph** (follow/feed/Explore) | ❌ None | ✅ Native (flagship app, Phase 2) |
 | **Discussions as community** | ❌ None | ✅ Core primitive (5chan/Seedit) |
 | **Mainstream onboarding** | ❌ Everyone runs a node | ✅ Non-custodial Forge RPC |
 | **Anti-spam on public repos** | ➖ Limited | ✅ Per-community challenge model |
-| **Funding rails** | ✅ Radworks/RAD grants | ✅ Bitsocial Network (Phase 2) + grants |
+| **Funding rails** | ✅ Radworks/RAD grants | ✅ Bitsocial Network (Phase 3) + grants |
 
 The overlap is small and the complementarity is large: **Radicle owns the code layer; Bitsocial owns the human layer.**
 
